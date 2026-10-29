@@ -1,0 +1,17 @@
+{
+  "name": "adigourdi",
+  "owner": {
+    "name": "Abderrahim Digourdi"
+  },
+  "description": "Claude Code plugins by Abderrahim Digourdi",
+  "plugins": [
+    {
+      "name": "reddit",
+      "source": {
+        "source": "github",
+        "repo": "adigourdi/reddit-skill"
+      },
+      "description": "Search Reddit and digest threads, read-only, through a local Chrome window. No API key or account."
+    }
+  ]
+}
