@@ -13,7 +13,7 @@ automatically: `/plugin` → **Marketplaces** → **adigourdi** → **Enable aut
 
 | Plugin | What it does |
 |--------|--------------|
-| [reddit](https://github.com/adigourdi/reddit-skill) | Search Reddit and digest threads, read-only, through a local Chrome window. No API key or account. |
+| [reddit](plugins/reddit) | Search Reddit and digest threads, read-only, through a local Chrome window. No API key or account. |
 
 ## License
 
