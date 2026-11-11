@@ -10,16 +10,18 @@ own profile, separate from your everyday Chrome.
 
 ## Install
 
-In Claude Code:
+In a terminal (needs `jq`):
 
-```
-/plugin marketplace add adigourdi/claude-plugins
-/plugin install reddit@adigourdi
+```bash
+claude plugin marketplace add adigourdi/claude-plugins &&
+jq '.extraKnownMarketplaces["adigourdi"].autoUpdate = true' ~/.claude/settings.json > ~/.claude/settings.json.new &&
+mv ~/.claude/settings.json.new ~/.claude/settings.json &&
+claude plugin install reddit@adigourdi
 ```
 
-To get updates automatically, turn on auto-update for the marketplace once:
-`/plugin` → **Marketplaces** → **adigourdi** → **Enable auto-update**.
-Otherwise, update by hand with `/plugin update reddit@adigourdi`.
+This installs the plugin for all your projects, with auto-update on: new versions arrive in the
+background and load at your next launch. To update right away:
+`claude plugin update reddit@adigourdi`.
 
 ### Requirements
 

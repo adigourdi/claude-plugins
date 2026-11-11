@@ -1,15 +1,17 @@
 # claude-plugins
 
-My [Claude Code](https://code.claude.com) plugins, as a marketplace. Add it once:
+My [Claude Code](https://code.claude.com) plugins, as a marketplace. To add it with auto-update on
+and install `reddit`, run this in a terminal (needs `jq`):
 
+```bash
+claude plugin marketplace add adigourdi/claude-plugins &&
+jq '.extraKnownMarketplaces["adigourdi"].autoUpdate = true' ~/.claude/settings.json > ~/.claude/settings.json.new &&
+mv ~/.claude/settings.json.new ~/.claude/settings.json &&
+claude plugin install reddit@adigourdi
 ```
-/plugin marketplace add adigourdi/claude-plugins
-```
 
-then install what you want with `/plugin install <name>@adigourdi`.
-
-Third-party marketplaces don't update on their own by default. To get updates
-automatically: `/plugin` → **Marketplaces** → **adigourdi** → **Enable auto-update**.
+Plugins install for all your projects. New versions arrive in the background and load at your next
+launch; to update right away, run `claude plugin update reddit@adigourdi`.
 
 | Plugin | What it does |
 |--------|--------------|
